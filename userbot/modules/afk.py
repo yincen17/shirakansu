@@ -33,7 +33,7 @@ async def mention_afk(mention):
     global COUNT_MSG
     global USERS
     global ISAFK
-    global AFFKREASON
+    global AFKREASON
     ISAFK_SQL = False
     AFKREASON_SQL = None
     if afk_db:
@@ -69,7 +69,7 @@ async def mention_afk(mention):
 async def afk_on_pm(sender):
     """ Function which informs people that you are AFK in PM """
     global ISAFK
-    global AFFKREASON
+    global AFKREASON
     ISAFK_SQL = False
     AFKREASON_SQL = None
     if afk_db:
@@ -118,7 +118,7 @@ async def set_afk(afk_e):
     message = afk_e.text
     string = afk_e.pattern_match.group(1)
     global ISAFK
-    global AFFKREASON
+    global AFKREASON
     ISAFK_SQL = False
     AFKREASON_SQL = None
     if afk_db:
@@ -146,7 +146,7 @@ async def type_afk_is_not_true(notafk):
     global COUNT_MSG
     global USERS
     global ISAFK
-    global AFFKREASON
+    global AFKREASON
     AFKREASON_SQL = None
     ISAFK_SQL = False
     if afk_db:
